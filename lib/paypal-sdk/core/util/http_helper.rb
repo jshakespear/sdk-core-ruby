@@ -58,6 +58,7 @@ module PayPal::SDK::Core
       # Make Http call
       # * payload - Hash(:http, :method, :uri, :body, :header)
       def http_call(payload)
+        puts "payload=#{payload.inspect}"
         response =
           log_http_call(payload) do
             puts "uri: #{payload[:uri].inspect}"
