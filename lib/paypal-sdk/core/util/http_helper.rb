@@ -60,7 +60,7 @@ module PayPal::SDK::Core
       def http_call(payload)
         response =
           log_http_call(payload) do
-            puts "http: #{payload[:http]}"
+            puts "http: #{payload[:http].inspect}"
             http = payload[:http] || create_http_connection(payload[:uri])
             http.start do |session|
               if [ :get, :delete, :head ].include? payload[:method]
