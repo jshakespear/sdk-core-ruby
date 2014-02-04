@@ -71,6 +71,7 @@ module PayPal::SDK::Core
               end
             end
           end
+        puts "response=#{response.inspect}"
         handle_response(response)
       end
 
